@@ -8,10 +8,12 @@ class ContactsController < ApplicationController
       render json: { contacts: } and return
     end
 
-    @contacts = Contact.select(:name, :number)
+    @contacts = Contact.all
   end
 
   def show
+    contact = Contact.find(params[:id])
 
+    render json: { contact: }
   end
 end

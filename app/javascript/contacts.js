@@ -13,3 +13,19 @@ function searchContacts(){
     })
     .catch(err => console.log(err))
 }
+
+
+function showContact(contactId){
+  fetch(`/contacts/${input}`, {})
+    .then(response => response.json())
+    .then(response => {
+      const page = document.getElementById('contactsPage')
+      const { contact } = response
+
+      const contactHTML = `<p>
+        <strong>Name</strong>: ${contact.name}<br/>
+        <strong>Name</strong>:${contact.number}</p>`
+      list.innerHTML = contactHTML
+    })
+    .catch(err => console.log(err))
+}

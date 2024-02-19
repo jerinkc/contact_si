@@ -1,4 +1,7 @@
-<p>
-  <%= contact.name %><br/>
-  <%= contact.number %><br/>
-</p>
+<div class="contact" onclick="showContact(<%= contact.id %>)">
+  <p>
+    <%= contact.name %><br/>
+    <%= contact.number %><br/>
+  </p>
+  <hr/>
+</div>
