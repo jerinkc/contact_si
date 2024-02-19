@@ -1,0 +1,13 @@
+<div class="contacts">
+  <div class="search-box">
+    <input type="text" id="search"
+      placeholder="Search contacts">
+  </div>
+  <div>
+    <div id="contactlist">
+      <% @contacts.each do |contact| %>
+        <%= render 'contact', contact: contact %>
+      <% end %>
+    </div>
+  </div>
+</div>

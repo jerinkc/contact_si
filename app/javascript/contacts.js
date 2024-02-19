@@ -1,6 +1,3 @@
-// Configure your import map in config/importmap.rb. Read more: https://github.com/rails/importmap-rails
-import "@hotwired/turbo-rails"
-import "controllers"
 
 function searchContacts(){
   let input = document.getElementById('search').value
@@ -16,14 +13,3 @@ function searchContacts(){
     })
     .catch(err => console.log(err))
 }
-
-
-window.addEventListener('turbo:load', () => {
-  const body = document.querySelector('body')
-  if (body) {
-    const searchbar = document.getElementById('search')
-    searchbar.addEventListener('input', () => {
-      searchContacts()
-    })
-  }
-})
