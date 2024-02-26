@@ -1,6 +1,9 @@
-<div class="contact" onclick="showContact(<%= contact.id %>)">
-  <p>
-    <%= contact.name %><br/>
+<div class="contact"
+  data-contacts-target="contactItem"
+  data-search-key='<%= "#{contact.name} <!> #{contact.number}".downcase %>'>
+  <p data-action="click->contacts#openContactShow"
+    data-contact-show-params='<%= contact.to_json %>'>
+    <strong><%= contact.name %></strong><br/>
     <%= contact.number %><br/>
   </p>
   <hr/>

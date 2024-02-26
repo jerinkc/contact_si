@@ -1,10 +1,12 @@
-<div id="contactsPage">
+<div id="contactsPage" data-controller="contacts">
   <div class="search-box">
-    <input type="text" id="search"
-      placeholder="Search contacts">
+    <input type="text"
+      id="search"
+      data-contacts-target="search"
+      data-action="input->contacts#searchContacts">
   </div>
   <div>
-    <div id="contactlist">
+    <div id="contactlist" data-contacts-target="list">
       <% @contacts.each do |contact| %>
         <%= render 'contact', contact: contact %>
       <% end %>
